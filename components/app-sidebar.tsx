@@ -11,7 +11,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import { Landmark, Layers, LayoutDashboard, Wallet } from "lucide-react"
+import { Gem, Landmark, Layers, LayoutDashboard, Wallet } from "lucide-react"
 
 // Real navigation data for the Finance App
 const sidebarData = {
@@ -20,7 +20,7 @@ const sidebarData = {
       name: "Tài chính Cá nhân",
       logo: <Wallet />,
       plan: "Quản lý chi tiêu",
-    }
+    },
   ],
   navMain: [
     {
@@ -37,9 +37,19 @@ const sidebarData = {
       title: "Danh mục",
       url: "/categories",
       icon: <Layers className="h-4 w-4" />,
-    }
-  ]
-}
+    },
+    {
+      title: "Sổ vàng",
+      url: "/golds",
+      icon: <Gem className="h-4 w-4" />,
+    },
+    {
+      title: "Sổ tiết kiệm",
+      url: "/test",
+      icon: <Gem className="h-4 w-4" />,
+    },
+  ],
+};
 
 interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
   user?: {
